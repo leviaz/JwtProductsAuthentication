@@ -16,7 +16,7 @@ import com.store.productsjwt.model.product.ProductRequestDto;
 import com.store.productsjwt.model.product.ProductResponseDto;
 import com.store.productsjwt.repository.ProductRepository;
 
-@RestController
+@RestController()
 @RequestMapping("/product")
 public class ProductController {
 
