@@ -36,6 +36,8 @@ public class SecurityConfigurations {
             .requestMatchers(HttpMethod.POST, "/auth/login").permitAll()
             .requestMatchers(HttpMethod.POST, "/auth/register").permitAll()
             .requestMatchers(HttpMethod.POST, "/product").hasRole("ADMIN")
+            .requestMatchers(HttpMethod.DELETE, "/product").hasRole("ADMIN")
+            .requestMatchers(HttpMethod.PUT, "/product").hasRole("ADMIN")
             .anyRequest().authenticated()) // verifica autenticacao
         .addFilterBefore(securityFilter, UsernamePasswordAuthenticationFilter.class) // filtro que verifica se o
                                                                                      // endpoint está aberto ou não

@@ -25,4 +25,16 @@ public class Product {
     this.name = data.name();
   }
 
+  public void setId(String id) {
+    this.id = id;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public void setPrice(Integer price) {
+    this.price = price;
+  }
+
 }
